@@ -1,0 +1,14 @@
+<form #teacherLogin = "ngForm" (ngSubmit) = "addTeacher(teacherLogin.value)" >
+    <input type = "text" name = "name" placeholder = "Name" ngModel>
+    <br/>
+    <input type = "text" name = "experience" placeholder = "experience" ngModel>
+    <br/>
+    <input type = "text" name = "emailid" placeholder = "emailid" ngModel>
+    <br/>
+    <input type = "text" name = "insName" placeholder = "Institute Name" ngModel>
+    <br/>
+    <input type = "text" name = "subject" placeholder = "subject Branch" ngModel>
+    <br/>
+    <button type="submit" class="btn-btn-primary">Sign up</button>
+ </form>
+ <!-- <button (click)="FetchUsers()">Ola</button> -->

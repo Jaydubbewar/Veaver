@@ -7,17 +7,26 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { FireconnectService } from './fireconnect.service';
 import { ListComponent } from './list/list.component';
+import { TeachersFormComponent } from './teachers-form/teachers-form.component';
 
+import { provideFirebaseApp , initializeApp } from '@angular/fire/app';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    ListComponent
+    ListComponent,
+    TeachersFormComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [FireconnectService],
   bootstrap: [AppComponent]
