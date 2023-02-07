@@ -12,7 +12,7 @@ export class FireconnectService {
   constructor(private http:HttpClient) { }
     
   
-  addTeacher(teacher:any[]){
+  addTeacher(teacher:Teacher){
     return this.http.post('https://viewer-d29cc-default-rtdb.firebaseio.com/teachers.json',teacher)
   }
 

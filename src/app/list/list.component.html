@@ -10,7 +10,7 @@
             <tbody>  
                 <tr *ngFor="let teacher of Users">  
                     <div class="card" style="width: 14rem;">
-                        <img src="https://firebasestorage.googleapis.com/v0/b/viewer-d29cc.appspot.com/o/1.jpg?alt=media&token=1020776d-6827-476d-8a5d-a07956a61d47" class="card-img-top" alt="...">
+                        <img src="{{teacher.image}}" class="card-img-top" alt="...">
                         <div class="card-body">
                           <h5 class="card-title">{{teacher.insName}}</h5>
                           <p class="card-text">{{teacher.subject}}</p>

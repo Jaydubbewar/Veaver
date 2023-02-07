@@ -6,4 +6,5 @@ export interface Teacher{
     passwd:string;
     insName:string;
     subject:string;    
+    image?:string;
 }

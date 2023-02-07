@@ -9,8 +9,8 @@ import { FireconnectService } from './fireconnect.service';
 import { ListComponent } from './list/list.component';
 import { TeachersFormComponent } from './teachers-form/teachers-form.component';
 
-import { provideFirebaseApp , initializeApp } from '@angular/fire/app';
-import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import {AngularFireModule} from '@angular/fire/compat'
+import { AngularFireStorageModule} from '@angular/fire/compat/storage'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 @NgModule({
@@ -27,6 +27,17 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
+    AngularFireModule.initializeApp({
+      apiKey: "AIzaSyAdv7zfZI2lxMdhvA_rbcR1fAiKru5GUYc",
+      authDomain: "viewer-d29cc.firebaseapp.com",
+      databaseURL: "https://viewer-d29cc-default-rtdb.firebaseio.com",
+      projectId: "viewer-d29cc",
+      storageBucket: "viewer-d29cc.appspot.com",
+      messagingSenderId: "570375814539",
+      appId: "1:570375814539:web:c7053f6c7120d5dd07838e",
+      measurementId: "G-CK8W5LYD04"
+    }),
+    AngularFireStorageModule
   ],
   providers: [FireconnectService],
   bootstrap: [AppComponent]

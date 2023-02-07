@@ -1,14 +1,25 @@
-<form #teacherLogin = "ngForm" (ngSubmit) = "addTeacher(teacherLogin.value)" >
-    <input type = "text" name = "name" placeholder = "Name" ngModel>
+<form [formGroup]="teacherLogin" >
+
+    <label for="Image">Upload Image></label>
+    <input type="file"  (change)="upload($event)" accept="*.png.jpg">
+    <br>
+    <input type = "text" formControlName = "name" placeholder = "Name" >
     <br/>
-    <input type = "text" name = "experience" placeholder = "experience" ngModel>
+    <input type = "text" formControlName = "experience" placeholder = "experience" >
     <br/>
-    <input type = "text" name = "emailid" placeholder = "emailid" ngModel>
+    <input type = "text" formControlName = "emailid" placeholder = "emailid" >
     <br/>
-    <input type = "text" name = "insName" placeholder = "Institute Name" ngModel>
+    <input type = "text" formControlName = "insName"  placeholder ="institute name" >
     <br/>
-    <input type = "text" name = "subject" placeholder = "subject Branch" ngModel>
+    <input type = "text" formControlName = "subject" placeholder = "subject Branch" >
     <br/>
-    <button type="submit" class="btn-btn-primary">Sign up</button>
+    
+    <button type="submit" class="btn-btn-primary" (click)="addTeacher()">Sign up</button>
  </form>
+
+ <br>
+    <label for="Iamge"Upload Image></label>
+    <input type="file" (change)="upload($event)" accept="*.png.jpg">
+    <br>
+    <!-- <img [src]=imga> -->
  <!-- <button (click)="FetchUsers()">Ola</button> -->
