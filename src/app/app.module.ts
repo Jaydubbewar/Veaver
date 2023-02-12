@@ -9,17 +9,21 @@ import { FireconnectService } from './fireconnect.service';
 import { ListComponent } from './list/list.component';
 import { TeachersFormComponent } from './teachers-form/teachers-form.component';
 
+
+import { AngularFirestoreModule } from "@angular/fire/compat/firestore";
 import {AngularFireModule} from '@angular/fire/compat'
 import { AngularFireStorageModule} from '@angular/fire/compat/storage'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { CityComponent } from './city/city.component';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
     ListComponent,
-    TeachersFormComponent
+    TeachersFormComponent,
+    CityComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
+    AngularFirestoreModule,
     AngularFireModule.initializeApp({
       apiKey: "AIzaSyAdv7zfZI2lxMdhvA_rbcR1fAiKru5GUYc",
       authDomain: "viewer-d29cc.firebaseapp.com",

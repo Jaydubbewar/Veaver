@@ -2,13 +2,9 @@
 <div class='panel-body'>  
     <div class='table-responsive'>  
         <table class='table'>  
-            <thead>  
-                <tr>
-                    <th>Id</th>  
-                    <th>Name</th>                      
-                </tr>  
-            </thead>  
+            
             <tbody>  
+                <div class="card-group">
                 <tr *ngFor="let teacher of Users">  
                     <div class="card" style="width: 14rem;">
                         <img src="{{teacher.image}}" class="card-img-top" alt="...">
@@ -29,6 +25,7 @@
                     <!-- <td>{{teacher.emailid}}</td>  
                     <td>{{teacher.name}}</td> -->
                 </tr>  
+                </div>
             </tbody>  
         </table>  
     </div>  

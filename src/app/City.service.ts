@@ -4,14 +4,42 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Teacher } from './Teacher.model';
 
+import { AngularFirestore } from '@angular/fire/compat/firestore';
+
 @Injectable({
   providedIn: 'root'
 })
-export class FireconnectService {
+export class CityService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient,private db: AngularFirestore) { }
     
-  
+  getCoach(name: string) {
+    console.log(name)
+    return new Promise<any>((resolve)=> {
+      this.db.collection('coach', ref => ref.where('subject', '==', name).where('experience','==','15')).valueChanges().subscribe(supplier => resolve(supplier))
+    })
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   addTeacher(teacher:Teacher){
     return this.http.post('https://viewer-d29cc-default-rtdb.firebaseio.com/teachers.json',teacher)
   }
