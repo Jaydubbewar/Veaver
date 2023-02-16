@@ -16,6 +16,7 @@ import { AngularFireStorageModule} from '@angular/fire/compat/storage'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CityComponent } from './city/city.component';
+import { CityVendorComponent } from './city-vendor/city-vendor.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import { CityComponent } from './city/city.component';
     FooterComponent,
     ListComponent,
     TeachersFormComponent,
-    CityComponent
+    CityComponent,
+    CityVendorComponent
   ],
   imports: [
     BrowserModule,

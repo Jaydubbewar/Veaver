@@ -25,6 +25,8 @@ export class CityComponent {
   products: any;
 
 ngOnInit(): void {
+  
+
   this.getProductStock('arts');
 
   combineLatest([this.startobs,this.endobs]).subscribe((value)=>{

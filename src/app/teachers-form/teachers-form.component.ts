@@ -4,7 +4,7 @@ import { FormBuilder, FormGroup, FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { FireconnectService } from '../fireconnect.service';
 import { AngularFireStorage } from '@angular/fire/compat/storage'
-import { Observable } from 'rxjs';
+
 @Component({
   selector: 'app-teachers-form',
   templateUrl: './teachers-form.component.html',

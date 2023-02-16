@@ -1,0 +1,16 @@
+<form [formGroup]="VendorLogin" >
+
+    <input type = "text" formControlName = "name" placeholder = "Name" >
+    <br/>
+    <input type = "text" formControlName = "experience" placeholder = "experience" >
+    <br/>
+    <input type = "text" formControlName = "emailid" placeholder = "emailid" >
+    <br/>
+    <input type = "text" formControlName = "insName"  placeholder ="institute name" >
+    <br/>
+    <input type = "text" formControlName = "subject" placeholder = "subject Branch" >
+    <br/>
+    
+    <button type="submit" class="btn-btn-primary" (click)="addTeacher()">Sign up</button>
+ </form>
+
