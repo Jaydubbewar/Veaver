@@ -19,10 +19,12 @@
             </ul>
           </div>
         </ul>  
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>           
+       
+        <input [(ngModel)]="searchTerm" (keydown)="search($event)" type="text" placeholder="Search" aria-label="Search">
+        <ul *ngFor="let club of clubs">
+            <li (click)="getProductStock(club.subject)">{{club.name}}</li>
+        </ul>  
+       
       </div>
     </div>
   </nav>

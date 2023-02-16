@@ -16,7 +16,7 @@ export class CityService {
   getCoach(name: string) {
     console.log(name)
     return new Promise<any>((resolve)=> {
-      this.db.collection('coach', ref => ref.where('subject', '==', name).where('experience','==','15')).valueChanges().subscribe(supplier => resolve(supplier))
+      this.db.collection('coach', ref => ref.where('experience','>','1').where('subject', '==', name)).valueChanges().subscribe(supplier => resolve(supplier))
     })
   }
 
