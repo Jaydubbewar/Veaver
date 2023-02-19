@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule,Routes } from '@angular/router';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,13 +12,22 @@ import { ListComponent } from './list/list.component';
 import { TeachersFormComponent } from './teachers-form/teachers-form.component';
 
 
-import { AngularFirestoreModule,AngularFirestore } from "@angular/fire/compat/firestore";
+import { AngularFirestoreModule } from "@angular/fire/compat/firestore";
+import { getAuth } from "firebase/auth";
 import {AngularFireModule} from '@angular/fire/compat'
 import { AngularFireStorageModule} from '@angular/fire/compat/storage'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CityComponent } from './city/city.component';
 import { CityVendorComponent } from './city-vendor/city-vendor.component';
+import { LoginComponent } from './login/login.component';
+
+
+const routers: Routes = [
+  {path:'',redirectTo:'login',pathMatch:'full'},
+];
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +36,8 @@ import { CityVendorComponent } from './city-vendor/city-vendor.component';
     ListComponent,
     TeachersFormComponent,
     CityComponent,
-    CityVendorComponent
+    CityVendorComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +56,7 @@ import { CityVendorComponent } from './city-vendor/city-vendor.component';
       appId: "1:570375814539:web:c7053f6c7120d5dd07838e",
       measurementId: "G-CK8W5LYD04"
     }),
-    AngularFireStorageModule
+    AngularFireStorageModule,
   ],
   providers: [FireconnectService],
   bootstrap: [AppComponent]

@@ -8,8 +8,20 @@
     <br/>
     <input type = "text" formControlName = "insName"  placeholder ="institute name" >
     <br/>
-    <input type = "text" formControlName = "subject" placeholder = "subject Branch" >
-    <br/>
+    <!-- <input type = "text"  placeholder = "subject Branch" >
+    <br/> -->
+    
+    <div class="dropdown" formControlName = "subject" >
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        All Category
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="#">Science</a></li>
+            <li><a class="dropdown-item" href="#">history</a></li>
+            <li><a class="dropdown-item" href="#">arts</a></li>
+        
+        </ul>
+      </div>
     
     <button type="submit" class="btn-btn-primary" (click)="addTeacher()">Sign up</button>
  </form>

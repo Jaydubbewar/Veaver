@@ -21,7 +21,6 @@ export class CityService {
 
   addCoach(): any {
     return this.db.collection('coach').doc('LA').set({name:"ramu",city : 'pusad'});
-   
   }
 
 
